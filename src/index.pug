@@ -1,0 +1,17 @@
+include ./components/button/button
+
+doctype html
+html(lang= 'ru')
+  head
+    meta(charset='utf-8')
+    title= 'Быстрый запуск Webpack'
+  body
+
+    +button()
+    +button('lg', 'large')
+    +button('sm', 'small')
+    +button('primary lg', 'primary large')
+    +button('success')
+    +button('link')
+    +button('disabled')
+    +button('loading')
