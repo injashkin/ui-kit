@@ -5,3 +5,10 @@ mixin input(idName = '', types = 'text', nameLabel = '', placeholder = '')
 mixin textarea(idName = '', rows = "3", nameLabel = '', placeholder = '')
   label.form-label(for=idName)= nameLabel
   textarea.form-input(id=idName placeholder=placeholder rows=rows)
+
+mixin select(options = '')
+  - const arr = options.split(',')
+
+  select.form-select
+    each text in arr
+      option= text
