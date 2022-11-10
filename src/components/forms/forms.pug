@@ -1,0 +1,4 @@
+mixin input(idName = '', types = 'text', nameLabel = '', placeholder = '')
+  .form-group 
+    label.form-label(for=idName)= nameLabel 
+    input.form-input(type=types id=idName placeholder=placeholder)
