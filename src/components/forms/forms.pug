@@ -1,9 +1,7 @@
 mixin input(idName = '', types = 'text', nameLabel = '', placeholder = '')
-  .form-group 
-    label.form-label(for=idName)= nameLabel 
-    input.form-input(type=types id=idName placeholder=placeholder)
+  label.form-label(for=idName)= nameLabel
+  input.form-input(type=types id=idName placeholder=placeholder =rest)
 
 mixin textarea(idName = '', rows = "3", nameLabel = '', placeholder = '')
-  .form-group 
-    label.form-label(for=idName)= nameLabel
-    textarea.form-input(id=idName placeholder=placeholder rows=rows)
+  label.form-label(for=idName)= nameLabel
+  textarea.form-input(id=idName placeholder=placeholder rows=rows)
