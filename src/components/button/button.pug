@@ -1,5 +1,6 @@
-mixin button(options = '', text = 'default')
+mixin btn(options = '', text = 'Submit')
   -
+    let tag = 'btn'
     const flags = ['disabled', 'loading']
     const arr = options.split(' ')
     const classItems = arr.map(item => {
@@ -8,11 +9,12 @@ mixin button(options = '', text = 'default')
     })
     let classes = classItems.join( ' ' )
 
-    classes = classes === '' || classes === ' ' ? 'btn' : `btn ${classes}`
+  if (classes === 'btn-group')
+    - classes = 'btn-group btn-group-block'
+    div(class=classes)
+      block
+  else 
+    - classes = classes === '' || classes === ' ' ? 'btn' : `btn ${classes}`
+    button(class=classes)= text
 
-  //-
-
-    let classes = `${cls} ${lg} ${link} ${sm} ${success}`.replace(/^ +| +$|( ) +/g,"$1")
-    
-  
-  button(class=classes)= text
+  //- #{tag}(class=classes)= text
