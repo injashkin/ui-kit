@@ -1,6 +1,17 @@
-.groups {
-  display: flex;
-}
+@import './scss/variables';
+
+@import './scss/mixins/shadow';
+@import './scss/mixins/button';
+
+@import './scss/utilities/shapes';
+@import './scss/utilities/loading';
+
+@import './components/button/button';
+@import './components/icon/icon';
+@import './components/forms/forms';
+
+@import './scss/layout';
+@import './scss/animations';
 
 .demo {
   margin: 0.5em 0;
