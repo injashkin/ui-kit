@@ -1,14 +1,28 @@
-mixin input(idName = '', types = 'text', nameLabel = '', placeholder = '')
-  label.form-label(for=idName)= nameLabel
+mixin input(idName = '', types = 'text', labelName = '', placeholder = '')
+  label.form-label(for=idName)= labelName
   input.form-input(type=types id=idName placeholder=placeholder =rest)
 
-mixin textarea(idName = '', rows = "3", nameLabel = '', placeholder = '')
-  label.form-label(for=idName)= nameLabel
+mixin textarea(idName = '', rows = "3", labelName = '', placeholder = '')
+  label.form-label(for=idName)= labelName
   textarea.form-input(id=idName placeholder=placeholder rows=rows)
 
 mixin select(options = '')
   - const arr = options.split(',')
-
   select.form-select
     each text in arr
       option= text
+
+mixin radio(inputName = '', labelName = '', radioNames = '')
+  - let check = none
+  - const arr = radioNames.split(',')
+  label.form-label= labelName 
+  each radioName in arr
+    - check = none
+    if radioName[radioName.length-1] === '^'
+      - radioName = radioName.slice(0, radioName.length-1)
+      - check = 'checked'
+    label.form-radio
+      input(type = 'radio' name = 'inputName' checked = check)
+      i.form-icon 
+      != radioName
+  
