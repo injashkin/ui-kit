@@ -1,7 +1,7 @@
-mixin btn(options = '', text = 'Submit')
+mixin btn(options = '', text = '')
   -
     let tag = 'btn'
-    const flags = ['disabled', 'loading']
+    const flags = ['disabled', 'loading', 'circle']
     const arr = options.split(' ')
     const classItems = arr.map(item => {
       if (flags.includes(item)) return item
@@ -16,5 +16,6 @@ mixin btn(options = '', text = 'Submit')
   else 
     - classes = classes === '' || classes === ' ' ? 'btn' : `btn ${classes}`
     button(class=classes)= text
+      block
 
   //- #{tag}(class=classes)= text
