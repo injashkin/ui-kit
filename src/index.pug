@@ -8,95 +8,95 @@ html(lang= 'ru')
     meta(charset='utf-8')
     title= 'Demo режим для UI-Kit'
   body
-    
-    .groups
-      .elements
-        h2 Icons
-
-        .demo
-          +btn('primary action lg')
-            +i('arrow-up')
-          p arrow-up
-          +btn('primary action lg')
-            +i('cross')
-          p cross
-          +i('menu')
-          +i('search')
-          +i('time 3')
-
-        h2 Buttons
-        .demo
-          +btn('', 'default button')
-          +btn('primary', 'primary button')
-          +btn('link', 'link button')
-        .demo
-          +btn('success', 'success button')
-          +btn('error', 'error button')
-        .demo
-          +btn('primary lg', 'large ')
-            +i('arrow-down')
-          +btn('primary lg', 'large button')
-        .demo
-          +btn('primary', 'normal ')
-            +i('arrow-down')
-          +btn('primary', 'normal button')
-        .demo
-          +btn('primary sm', 'small ')
-            +i('arrow-down')
-          +btn('primary sm', 'small button')
-        .demo
-          +btn('action primary lg')
+    .container
+      .columns 
+        .column.col-4
+          h2 Icons
+          .demo
+            +btn('primary action lg')
+              +i('arrow-up')
+            p arrow-up
+            +btn('primary action lg')
+              +i('cross')
+            p cross
             +i('menu')
-          +btn('action primary')
-            +i('menu')
-          +btn('action sm primary')
-            +i('menu ')
-          +btn('circle primary lg')
-            +i('arrow-up')
-          +btn('circle primary')
-            +i('arrow-up')
-          +btn('circle primary sm')
-            +i('arrow-up')
-        .demo 
-          +btn('disabled', 'default disabled')
-          +btn('disabled primary', 'primary disabled')
-          +btn('disabled link', 'link disabled')
-        .demo 
-          +btn('loading', 'default button')
-          +btn('primary loading', 'primary button')
-          +btn('link loading', 'link button')
-        .demo
-          +btn('block lg', 'block')
-        
-        h3 Button groups
+            +i('search')
+            +i('time 3')
 
-        .demo
-          +btn('group')
-            +btn('', 'first button')
-            +btn('', 'second button')
-            +btn('', 'third button')
-        .demo
-          +btn('group block')
-            +btn('primary', 'first button')
-            +btn('primary', 'second button')
-            +btn('primary', 'third button')
-        
-        
-        h2 Inputs
+          h2 Buttons
+          .demo
+            +btn('', 'default button')
+            +btn('primary', 'primary button')
+            +btn('link', 'link button')
+          .demo
+            +btn('success', 'success button')
+            +btn('error', 'error button')
+          .demo
+            +btn('primary lg', 'large ')
+              +i('arrow-down')
+            +btn('primary lg', 'large button')
+          .demo
+            +btn('primary', 'normal ')
+              +i('arrow-down')
+            +btn('primary', 'normal button')
+          .demo
+            +btn('primary sm', 'small ')
+              +i('arrow-down')
+            +btn('primary sm', 'small button')
+          .demo
+            +btn('action primary lg')
+              +i('menu')
+            +btn('action primary')
+              +i('menu')
+            +btn('action sm primary')
+              +i('menu ')
+            +btn('circle primary lg')
+              +i('arrow-up')
+            +btn('circle primary')
+              +i('arrow-up')
+            +btn('circle primary sm')
+              +i('arrow-up')
+          .demo 
+            +btn('disabled', 'default disabled')
+            +btn('disabled primary', 'primary disabled')
+            +btn('disabled link', 'link disabled')
+          .demo 
+            +btn('loading', 'default button')
+            +btn('primary loading', 'primary button')
+            +btn('link loading', 'link button')
+          .demo
+            +btn('block lg', 'block')
 
-        +input('field-text')
-        +input('field-text', 'text', 'Name', 'Name')
-        +input('field-email', 'email', 'Email', 'Email')
-        +textarea('input-textarea', '5', 'Message', 'Textarea')
+        .column.col-4
+          h3 Button groups
 
-        h2 Dropdowns
+          .demo
+            +btn('group')
+              +btn('', 'first button')
+              +btn('', 'second button')
+              +btn('', 'third button')
+          .demo
+            +btn('group block')
+              +btn('primary', 'first button')
+              +btn('primary', 'second button')
+              +btn('primary', 'third button')
+          
+          
+          h2 Inputs
 
-        +select('Item 1, Item 2, Item 3, Item 4')
+          +input('field-text')
+          +input('field-text', 'text', 'Name', 'Name')
+          +input('field-email', 'email', 'Email', 'Email')
+          +textarea('input-textarea', '5', 'Message', 'Textarea')
 
-        h2 Radio button
+          h2 Dropdowns
 
-        +radio('gender', 'Gender', 'Male^, Female')
-      .elements 
-      
+          +select('Item 1, Item 2, Item 3, Item 4')
+
+          h2 Radio button
+
+          +radio('gender', 'Gender', 'Male^, Female')
+
+        .column.col-4
 
 
