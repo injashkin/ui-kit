@@ -1,7 +1,7 @@
 mixin btn(options = '', text = '')
   -
     let tag = 'btn'
-    const flags = ['disabled', 'loading', 'circle']
+    const flags = ['active', 'disabled', 'loading', 'circle']
     const arr = options.split(' ')
     const classItems = arr.map(item => {
       if (flags.includes(item)) return item
@@ -9,13 +9,16 @@ mixin btn(options = '', text = '')
     })
     let classes = classItems.join( ' ' )
 
-  if (classes === 'btn-group')
-    - classes = 'btn-group btn-group-block'
+  if (arr.includes('group'))
+    - classes = 'btn-group'
+    if (arr.includes('block'))
+      - classes = 'btn-group btn-group-block'
     div(class=classes)
       block
   else 
     - classes = classes === '' || classes === ' ' ? 'btn' : `btn ${classes}`
-    button(class=classes)= text
+    - const tabindex = arr.includes('disabled') ? '-1' : none
+    button(class=classes tabindex=tabindex)= text
       block
 
   //- #{tag}(class=classes)= text
