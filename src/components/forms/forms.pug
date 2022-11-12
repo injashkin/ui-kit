@@ -25,4 +25,10 @@ mixin radio(inputName = '', labelName = '', radioNames = '')
       input(type = 'radio' name = 'inputName' checked = check)
       i.form-icon 
       != radioName
+
+mixin switch(text = text)
+  label.form-switch
+    input(type='checkbox')
+    i.form-icon
+    = text
   
