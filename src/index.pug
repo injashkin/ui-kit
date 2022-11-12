@@ -10,18 +10,32 @@ html(lang= 'ru')
   body
     .container
       .columns 
-        .column.col-4
+        .column.col-xs-12
           h2 Icons
-          .demo
-            +btn('primary action lg')
-              +i('arrow-up')
-            p arrow-up
-            +btn('primary action lg')
-              +i('cross')
-            p cross
-            +i('menu')
-            +i('search')
-            +i('time 3')
+          .columns
+            .column.col-3
+              +btn('primary action lg')
+                +i('arrow-up')
+              p arrow-up
+            .column.col-3
+              +btn('primary action lg')
+                +i('cross')
+              p cross
+            .column.col-3
+              +btn('primary action lg')
+                +i('menu')
+              p menu 
+            .column.col-3
+              +btn('primary action lg')
+                +i('arrow-down')
+              p arrow-down
+            .column.col-3
+              +i('time 3')
+              p time 3x
+            .column.col-3
+              +btn('primary action lg')
+                +i('apps')
+              p apps
 
           h2 Buttons
           .demo
@@ -66,8 +80,7 @@ html(lang= 'ru')
             +btn('link loading', 'link button')
           .demo
             +btn('block lg', 'block')
-
-        .column.col-4
+        
           h3 Button groups
 
           .demo
@@ -75,15 +88,23 @@ html(lang= 'ru')
               +btn('', 'first button')
               +btn('', 'second button')
               +btn('', 'third button')
-          .demo
+        
             +btn('group block')
               +btn('primary', 'first button')
               +btn('primary', 'second button')
               +btn('primary', 'third button')
-          
-          
-          h2 Inputs
 
+            +btn('group')
+              +btn('sm active', 'first button')
+              +btn('sm', 'second button')
+              +btn('sm', 'third button')
+            +btn('group block')
+              +btn('primary sm active', 'first button')
+              +btn('primary sm', 'second button')
+              +btn('primary sm', 'third button')
+
+        .column.col-4
+          h2 Inputs
           +input('field-text')
           +input('field-text', 'text', 'Name', 'Name')
           +input('field-email', 'email', 'Email', 'Email')
@@ -97,6 +118,20 @@ html(lang= 'ru')
 
           +radio('gender', 'Gender', 'Male^, Female')
 
+          h2 Switch 
+          +switch('Send me emails with news and tips')
+          +switch('Send me emails with news and tips', 'checked')
+
+          h2 Checkbox 
+          +checkbox('Remember me')
+          +checkbox('Remember me', 'checked')
+
         .column.col-4
+          h2 Horizontal forms
+
+          .form-horizontal 
+            
+
+        
 
 
