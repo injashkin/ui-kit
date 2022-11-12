@@ -1,12 +1,15 @@
+@use 'sass:math';
+
 // Layout
 .container {
   margin-left: auto;
   margin-right: auto;
   padding-left: $layout-spacing;
   padding-right: $layout-spacing;
+  box-sizing: border-box;
   width: 100%;
 
-  $grid-spacing: $layout-spacing;
+  $grid-spacing: $layout-spacing * calc($html-font-size / 1px);
 
   &.grid-xl {
     max-width: calc($grid-spacing * 2 + $size-xl);
@@ -64,6 +67,7 @@
 .column {
   flex: 1;
   max-width: 100%;
+  //box-sizing: border-box;
   padding-left: $layout-spacing;
   padding-right: $layout-spacing;
 
