@@ -1,8 +1,8 @@
 mixin i(name = 'arrow-down')
-  - 
+  -
     const arr = name.split(' ')
     const classIcon = `icon-${arr[0]}`
     const num = arr[1] ? `icon-${arr[1]}x` : ''
     const classes = `icon ${num} ${classIcon}`.replace(/^ +| +$|( ) +/g,"$1")
-
+    
   i(class=classes)
